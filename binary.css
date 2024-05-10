@@ -1,0 +1,786 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}  
+
+body {
+margin: 0;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* Define a fallback font stack for browsers that don't support system-ui */
+display: flex; 
+flex-wrap: wrap;
+align-items: center; 
+justify-content: center; 
+max-height: auto;
+overflow: hidden;
+background: rgb(37, 37, 37);
+}
+header{
+  position: relative;
+  background-color: rgb(37, 37, 37);
+  top:0;
+  left:0;
+  width:100%;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding:10px 100px;
+}
+header a{
+  color:yellow;
+
+}
+.animation
+{
+  position: relative;
+  
+  background-color:#fff;
+  width:90.5%;
+  
+  
+  height: 535px;
+}
+.arrow-1
+{   
+  position: absolute;
+  width:61px;
+  top: 75%;
+  left:0;
+  padding-top:30px;
+  padding-left: 25px;
+  transform: translateY(-50%);
+  background-color:palevioletred;
+  height:85px;
+}
+.arrow-2
+{   
+  position: absolute;
+  width:61px;
+  top: 49.2%;
+  right:0;
+  transform: translateY(-50%);
+  padding-top:30px;
+  padding-left: 20px;
+  background-color:rgb(72, 72, 146);
+  height:75px;
+}
+.arrow-3
+{   
+  position: absolute;
+  width:61px;
+  top: 74.8%;
+  right:0;
+  padding-top: 10px;
+  padding-left:20px;
+  transform: translateY(-50%);
+  background-color:rgb(66, 235, 91);
+  height:200px;
+}
+.arrow-3 span{
+  margin-top:70px;
+}
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+.menu-1
+{
+  position: relative;
+  padding:  0;
+  height:85px;
+  top: 28.8%;
+  left:1%;
+  background-color: palevioletred;
+  width:0;
+  overflow: hidden;
+  transition: width 0.5s; 
+
+}
+.menu1-ul
+{   position: absolute;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+ 
+}
+
+
+
+
+
+.menu-1.show {
+  width:137px;
+
+}
+#leftarrow {
+  transition: transform 0.3s;
+  cursor: pointer; 
+}
+#leftarrow.rotate{
+  transform: rotate(180deg);
+}
+.create{
+  padding:10px 38px;
+  font-weight:700;
+  width:100%;
+  background-color:palevioletred;
+  color:#fff;
+  font-family: "Teachers", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.2em;
+  font-style: normal;
+}.search{
+  padding:10px 38px; 
+  font-weight:700;
+  width:100%;
+  background-color:palevioletred;
+  color:#fff;
+  font-family: "Teachers", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.2em;
+  display: block;
+  font-style: normal;
+}
+.restart
+{
+  padding:10px 38px; 
+  font-weight:700;
+  width:100%;
+  background-color:palevioletred;
+  color:#fff;
+  font-family: "Teachers", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.2em;
+  display: none;
+  font-style: normal;  
+}
+.restart.appear
+{
+display: block;
+}
+.search.disappear
+{
+  display: none;
+}
+.create:hover,
+.search:hover,
+.restart:hover{
+  cursor:pointer;
+  color:#fff;
+  background-color: rgb(29, 28, 28);
+}
+.prompt
+{
+  display: none;
+  position: relative;
+  width:400px;
+  background-color:palevioletred;
+  height:40px;
+  top: 12.9%;
+  left:12.8%;
+  transition: left 0.5s ease;
+}
+.prompt-menu    
+{ 
+  padding:10px 5px;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  position: absolute;
+}
+.key-value,
+.random,
+.array{
+  padding:0 10px;
+  font-weight: 600;
+  font-family: "Teachers", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.2em;
+  color:#fff;
+  font-style: normal;
+}
+.key-item
+{
+  width:30px;
+  border-radius: 2px;
+  height:20px;
+  border:1px solid #000;
+  font-family: "Teachers", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size:0.8em;
+  font-weight: bold;
+  padding: 2px;
+}
+.key-item:focus
+{   outline: none;
+  border:2px solid #4CAF50;
+  border-radius: 2px;
+  font-family: "Teachers", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.random{
+ width:60px;
+ cursor: pointer;
+ color:#000;
+ padding:0 10px;
+ line-height: 24px;
+ height:25px;
+ background-color:#fff; 
+}
+.random:hover{
+  color:#fff;
+  background-color: #000;
+}
+.array-items{
+ width: 130px;
+ height:25px;
+ border-radius: 3px;
+ border:1px solid #000;
+ font-family: "Teachers", sans-serif;
+ font-optical-sizing: auto;
+ font-style: normal;
+ font-size:0.8em;
+ padding: 2px;
+}
+.go
+{
+  width:50px;
+  height:25px;
+  border-radius: 2px;
+  padding-top: 2px;
+  padding-left: 12px;
+  background-color:rgb(62, 181, 62);
+}
+.go:hover{
+  background-color: rgb(53, 118, 53);
+  color:#fff;
+}
+.array-items:focus
+{
+  outline:none;
+  border:2px solid #4CAF50;
+  border-radius: 2px;
+}
+.prompt.show1
+{
+display: block;
+}
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+.menu-2 {
+  position: relative;
+  width: 0;
+  overflow: hidden;
+  font-size: 15px;
+  background-color: rgb(72, 72, 146);
+  height: 75px;
+  top: -17.55%;
+  color:#fff;
+  right:1%;
+  margin-left: auto;
+  padding: 10px 0px;
+  transition: width 1.5s ease;
+
+}
+.menu-2.going{
+  top:-25%;
+}
+.menu-2.e1{
+  display: none;
+}
+.menu-2.e1.flow{
+  display: block; 
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size:23px;
+  font-weight: bold;
+  font-style: normal;
+  border: 0px solid transparent;
+    
+}
+.menu-2.show {
+ 
+  width: 450px;
+  
+}
+#rightarrow1 {
+  transition: transform 0.3s;
+  cursor: pointer; 
+}
+#rightarrow1.rotate
+{
+  transform: rotate(180deg);
+}
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.menu-3{
+  position: relative;
+  height:200px;
+  width:0;
+  top:-12%;
+  right:1%;
+  overflow: hidden;
+  margin-left:auto;
+  background-color:rgb(66, 235, 91);
+  color:#000;
+  transition:width 1.5s ease;
+}
+.menu-3.show
+{
+  width:450px;
+}
+.menu-3.going{
+  top:-19.5%;
+}
+.code{
+  display: none;
+  padding: 8px;
+}
+.code.flow
+{
+
+  display:block;
+}
+#rightarrow2 {
+  transition: transform 0.3s;
+  cursor: pointer; 
+}
+#rightarrow2.rotate
+{
+  transform: rotate(180deg);
+}
+/*code*/
+.code .e1
+{
+  width:100%;
+  height:18px;
+  margin-top:-8px;
+  transition: background-color 0.5s ease-in;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size:13px;
+  font-weight: 2em;
+  font-style: normal;
+  border: 0px solid transparent;
+
+}
+.code .e1 .show{
+  color:white;
+  background-color: #000;
+}
+.code .e2
+{
+  width:100%;
+  height:33px;
+  margin-top: -4px;
+  transition: background-color 0.5s ease-in;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size:13px;
+  border: 0px solid transparent;
+  font-weight: 2em;
+  font-style: normal;
+ 
+}
+.code .e2.show{
+  color:white;
+  background-color: #000;
+}
+.code .e3
+{
+  width:100%;
+  height:18px;
+  margin-top: -22px;
+  transition: background-color 0.5s ease-in;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size:13px;
+  font-weight: 2em;
+  border: 0px solid transparent;
+  font-style: normal;
+  
+}
+.code .e3.show{
+  color:white;
+  background-color: #000;
+}
+.code .e4
+{
+  width:100%;
+  height:18px;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size:13px;
+  font-weight: 2em;
+  font-style: normal;
+  margin-top: -2px;
+  transition: background-color 0.5s ease-in;
+  border: 0px solid transparent;
+
+}
+.code .e4.show{
+  color:white;
+  background-color: #000;
+}
+.code .e5 
+{
+  width:100%;
+  height:35px;
+  margin-top: -3px;
+  transition: background-color 0.5s ease-in;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size:13px;
+  font-weight: 2em;
+  border: 0px solid transparent;
+  font-style: normal;
+}
+.code .e5.show{
+  color:white;
+  background-color: #000;
+}
+.code .e6 
+{
+  width:100%;
+  height:38px;
+  margin-top: -2px;
+  transition: background-color 0.5s ease-in;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size:13px;
+  font-weight: 2em;
+  border: 0px solid transparent;
+  font-style: normal;
+}
+.code .e6.show{
+  color:white;
+  background-color: #000;
+}
+.code .e7 
+{
+  width:100%;
+  height:35px;
+  margin-top: -4px;
+  transition: background-color 0.5s ease-in;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size:13px;
+  font-weight: 2em;
+  font-style: normal;
+  border: 0px solid transparent;
+}
+.code .e7.show{
+  color:white;
+  background-color: #000;
+}
+.code .e8 
+{
+  width:100%;
+  height:25px;
+  margin-top: 1px;
+  transition: background-color 0.5s ease-in;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size:13px;
+  font-weight: 2em;
+  font-style: normal;
+  border: 0px solid transparent;
+}
+.code .e8.show{
+  color:white;
+  background-color: #000;
+}
+/*animation*/
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  position: absolute;
+  margin-left: 80px;
+  
+}
+
+.p1{
+font-family: "Nunito", sans-serif;
+font-optical-sizing: auto;
+font-size:20px;
+font-weight: 2em;
+font-style: normal;
+margin-left:-165px;
+}
+
+.key{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; 
+  width: 50px;
+  height: 50px;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size:20px;
+  font-weight: 2em;
+  font-style: normal;
+  line-height: 40px;
+  margin:0;
+  margin-left:-135px;
+  padding: 5px 5px;
+  border-radius: 5px;
+  background-color: lightblue;
+  position: absolute;
+  transition: left 1.5s; 
+}
+.input-key
+{
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  margin:0;
+  margin-top:-5%;
+  outline: none;
+  padding:8px;
+  background-color: transparent;
+  border: 0 solid transparent;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size:20px;
+  font-weight: 2em;
+  font-weight: 2em;
+}
+.identity
+{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: 50px;
+  top:50px;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.lowid div{
+  width:15px;
+  height:15px;
+  background-color: blue;
+  position: absolute;
+  margin-left: -30px;
+}
+.highid div{
+  width:15px;
+  height:15px;
+  background-color: red;
+  position: absolute;
+  margin-left: -30px;
+}
+.midid div{
+  width:15px;
+  height:15px;
+  background-color: yellow;
+  position: absolute;
+  margin-left: -30px;
+}
+.foundid div{
+  width:15px;
+  height:15px;
+  background-color: green;
+  position: absolute;
+  margin-left: -30px;
+
+}
+/* animation*/
+.main{
+  width:800px;
+  height: 100px;
+  position: relative;
+  
+  margin-top:40px;
+  margin-left: 200px;
+  padding:10px;
+}
+/*video animate*/
+.lower
+{
+  background-color:rgb(37, 37, 37);
+  width:100%;
+  height: 54px;
+  display:flex;
+  flex-direction: row;
+  gap:150px;
+  position: relative;
+}
+
+
+
+/* play back speed */
+.box{
+  background: transparent;
+  height: 50px;
+  margin-left: 100px;
+  margin-top:0;
+  padding: 20px 10px 20px 30px;
+  
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+}
+.box .slider{
+width: 300px;
+height: 40px;
+display: flex;
+align-items: center;
+margin-right: 15px;  
+}
+.box .slider input{
+  height: 10px;
+  width: 100%;
+  outline: none;
+  cursor:pointer;
+  background-color:aqua;
+  background-color: #f2f2f2;
+  border-radius: 25px;
+  box-shadow: inset 0px 0px 4px rgba(0,0,0,0.2);
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.array {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.array-item {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(144, 210, 232);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #000;
+  border-radius: 5px;
+}
+.array-item.found
+{
+  
+  background-color: #4CAF50;
+}
+.key-container {
+  margin-top: 20px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.arrow-low.anmie,
+.arrow-high.anmie,
+.arrow-mid.anmie{
+  transition: left 0.5s ease;
+}
+@keyframes highlight {
+  0% { background-color: lightblue; }
+  50% { background-color: yellow; }
+  100% { background-color: lightblue; }
+}
+@keyframes highlights {
+  0% { background-color: lightblue; }
+  50% { background-color: yellow; }
+  100% { background-color: green; }
+}
+
+
+.container {
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 20px;
+}
+
+.array {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+}
+
+
+.array-item {
+position: relative;
+width: 50px;
+height: 50px;
+font-family: "Nunito", sans-serif;
+font-optical-sizing: auto;
+font-size:20px;
+font-weight: 2em;
+font-style: normal;
+background-color: lightblue;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 5px;
+transition: background-color 0.5s;
+}
+
+.array-item span {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size:18px;
+  font-weight: 2em;
+  font-style: normal;
+position: absolute;
+
+bottom: -30px;
+left: 50%;
+transform: translateX(-50%);
+}
+.index {
+position: absolute;
+bottom: -20px;
+left: 0;
+right: 0;
+font-size: 12px;
+color: #666;
+}
+.key-container {
+margin-top: 20px;
+}
+
+button {
+padding: 5px 10px;
+background-color: #4CAF50;
+color: white;
+border: none;
+cursor: pointer;
+}
+
+.arrow-low.anmie,
+.arrow-high.anmie,
+.arrow-mid.anmie {
+transition: left 0.5s ease;
+}
+
+@keyframes highlight {
+0% { background-color: lightblue; }
+50% { background-color: yellow; }
+100% { background-color: lightblue; }
+}
+
+@keyframes fadeOut {
+0% { opacity: 1; }
+100% { opacity: 0; }
+}
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="linear.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <header>
+        <a href="index.html" style="text-decoration:none;">Algo</a>
+    </header>
+    <div class="arrow-1" onclick="toggleMenu()"><span class="material-symbols-outlined" id="leftarrow">
+        arrow_forward_ios
+        </span></div>
+    <div class="animation">
+        <div class="main">
+            <div class="key"></div> <!-- key element  -->
+            <div class="container" id="container"></div>
+           
+        </div>
+        <div class="menu-1">
+            <ul class="menu1-ul">
+                <li class="create" onclick="toggle()">create</li>
+                <li class="search" onclick="initializeSearch()">search</li>
+            </ul>
+        </div>
+        <div class="prompt">
+            <ul class="prompt-menu">
+                <li class="key-value">key = <input type="text" class="key-item" ></li>
+                <li class="array">array = <input type="text" class="array-item" ></li>
+                <li class="go" onclick="initializeSearch1()" ondblclick="linearSearch1()">Go</li> 
+            </ul>
+        </div>
+        <div class="menu-2">
+            <h4 class="e1" style="margin-left:10px;">Linear Search
+            </h4>
+        </div>
+        <div class="menu-3">
+            <div class="code"><h4 class="e1">procedure linear_search(list, key)</h4><br>
+                <h4 class="e2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for each item in the list</h4>
+                   <br><h4 class="e3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if item == key</h4>
+                        <br><h4 class="e4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return index of item</h4>
+                <br><h4 class="e5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return -1 (indicating key not found)</h4>
+            </div>
+        </div>
+    </div>
+    <div class="arrow-2" onclick="toggleMenu2()"><span class="material-symbols-outlined" id="rightarrow1">
+        arrow_back_ios
+        </span>
+    </div>
+    <div class="arrow-3" onclick="toggleMenu3()"><span class="material-symbols-outlined" id="rightarrow2">
+        arrow_back_ios
+        </span></div>
+    <div class="lower">
+    <div class="box">
+        <div class="slider">
+            <p style="font-size: 1.3em; padding-right: 10px;font-weight:800;color:#fff;">1x</p>
+             <input id="speed" type="range" min="0" max="3" value="0">
+             <p style="font-size: 1.3em; padding-left: 10px;font-weight:800;color:#fff;">2x</p>
+        </div>
+    </div>
+    <!--
+    <div class="play">
+        <button class="forward-next"></button>
+        <div class="playpause">
+             <div class="button"></div>
+             <button class="restart"></button>
+        </div>
+        <button class="backward-next"></button>
+        <div class="progress">
+            <div class="progress-bar a"></div>
+        </div>
+    </div>-->
+ </div>
+        <script src="linear.js"></script>
+        
+</body>
+</html>

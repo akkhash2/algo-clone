@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="binary.css">
+    <!--nunito style for elements-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25+Charted&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!--teachers font for menu -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&family=Honk&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html" style="text-decoration:none;">Algo</a></h1>
+    </header>
+    <div class="arrow-1" onclick="toggleMenu()"><span class="material-symbols-outlined" id="leftarrow">
+        arrow_forward_ios
+        </span></div>
+    <div class="animation">
+        <div class="main">
+            
+            <p class="p1">key element </p><div class="key"><input class="input-key" type="text" value="10" oninput="updateValue(this.value)"></div> <!-- key element  -->
+            <div class="array" id="array">
+                <!-- Initial array items -->
+              </div>
+            
+        </div>
+        <div class="identity">
+             <div class="lowid"><div></div> low</div>
+             <div class="highid"><div></div>high</div>
+             <div class="midid"><div></div>mid</div>
+             <div class="foundid"><div></div>found</div>
+        </div>
+        <div class="menu-1">
+            <ul class="menu1-ul">
+                <li class="create" onclick="toggle()">create</li>
+                <li class="search" onclick="startBinarySearch()">search</li>
+                <li class="restart" onclick="startBinarySearch()">restart</li>
+            </ul>
+        </div>
+        <div class="prompt">
+            <ul class="prompt-menu">
+                
+                <li class="key-value">key = <input type="text" class="key-item" ></li>
+                <li class="array">array = <input type="text" class="array-items" ></li>
+                <li class="go" onclick="initializeSearch1()" ondblclick="startBinarySearch()">Go</li> 
+            </ul>
+        </div>
+        <div class="menu-2">
+            <h4 class="e1" style="margin-left:10px;">binary Search
+            </h4>
+        </div>
+        <div class="menu-3">
+            <div class="code"><div class="e1"><b>binary_search(array, target):</b></div>
+                <div class="e2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;low = 0<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; high = length(array) - 1</div>
+                   <br><div class="e3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while low <= high:</div>
+                   <div class="e4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mid = (low + high) / 2</div>
+                    <div class="e5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if array[mid] == target:
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return mid</div>
+                    <div class="e6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if array[mid] < target:
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;low = mid + 1</div>
+                    <div class="e7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:     
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;high = mid - 1 </div>
+                    <div class="e8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return -1 </div>
+                    
+            </div>
+        </div>
+    </div>
+    <div class="arrow-2" onclick="toggleMenu2()"><span class="material-symbols-outlined" id="rightarrow1">
+        arrow_back_ios
+        </span>
+    </div>
+    <div class="arrow-3" onclick="toggleMenu3()"><span class="material-symbols-outlined" id="rightarrow2">
+        arrow_back_ios
+        </span></div>
+    <div class="lower">
+    <div class="box">
+        <div class="slider">
+            <p style="font-size: 1.3em; padding-right: 10px;font-weight:800;color:#fff;">1x</p>
+             <input id="speed" type="range" min="0" max="3" value="0">
+             <p style="font-size: 1.3em; padding-left: 10px;font-weight:800;color:#fff;">2x</p>
+        </div>
+    </div>
+   
+ </div>
+        <script src="binary.js"></script>
+        
+</html>
