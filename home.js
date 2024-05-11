@@ -4,7 +4,7 @@ let timeout;
 function playGif() {
   const img = document.getElementById('image');
   if (!playing) {
-    img.src = 'img/sorting.gif'; 
+    img.src = 'img/sorting.jpg'; 
     playing = true;
   }
 }
